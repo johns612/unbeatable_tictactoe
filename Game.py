@@ -260,7 +260,7 @@ def findBestChoiceHard():
             randInt = randint(0,8)
             if board[randInt] == " ":
                 return randInt
-            
+
 #Returns an array of all available moves in a given board state.
 def getPossibleMoves(a_board):
     pMoves = []
@@ -309,6 +309,7 @@ def findMinVal(a_list):
             minVal = a_list[i]
             index = i
     return index
+
 #UNBEATABLE MODE: Calculates and stores every possible game state and sets the_move to be the best possible move for a given board
 def Minimax(a_board, value, depth, symbol):
     if checkWon(a_board, player) or checkWon(a_board, opp) or getPossibleMoves(a_board) == []:
@@ -321,7 +322,7 @@ def Minimax(a_board, value, depth, symbol):
         symbol = "O"
     else:
         symbol = "X"
-    
+
     for i in moves:
         copyBoard = copy.deepcopy(a_board)
         copyBoard[i] = newSymbol
@@ -336,7 +337,7 @@ def Minimax(a_board, value, depth, symbol):
     else:
         minScoreIndex = findMinVal(scores)
         return scores[minScoreIndex]
-                      
+
 redTurn = True
 board = [" "] * 9
 resetGame = False
@@ -398,7 +399,7 @@ while layerTwo == True:
 
             #User Input for move
             move_raw = raw_input("Please enter your move: ")
-            
+
             if checkString(move_raw) == True:
                 userMove_str = str(move_raw)
                 if userMove_str.lower() == "tl":
@@ -570,7 +571,7 @@ while layerTwo == True:
                 print"\nInvalid Input"
 
             #WIN CONDITIONS
-                
+
             #X
             #Rows
             if board[0] == "X" and board[1] == "X" and board[2] == "X":
@@ -701,7 +702,7 @@ while layerTwo == True:
                 print"\nCOMPUTER (O)"
                 player = "O"
                 opp = "X"
-            if isUserMove == True:                
+            if isUserMove == True:
                 move_raw = raw_input("Please enter your move: ")
             else:
                 #EASY MODE
@@ -747,7 +748,7 @@ while layerTwo == True:
                 elif computerChoice == 8:
                     move_raw = "br"
                     print"\nbot-right"
-                    
+
             #Check and play move
             if checkString(move_raw) == True:
                 userMove_str = str(move_raw)
@@ -997,9 +998,9 @@ while layerTwo == True:
                 print"\nInvalid Input"
 
             firstTurn = False
-                
+
             #WIN CONDITIONS
-                
+
             #X
             #Rows
             if board[0] == "X" and board[1] == "X" and board[2] == "X":
