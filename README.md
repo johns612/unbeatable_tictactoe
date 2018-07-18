@@ -1,5 +1,8 @@
 # Unbeatable Tic Tac Toe - Python
 ### A python tic tac toe game with unbeatable minimax based ai.
+
+I've turned this program into a web app! [Try it now!](http://kraylus.cloud/public/game/tic-tac-toe.html)
+
 Note: This game was developed as the final project for my Computer Science 101 class as a freshman in college. I'm fully aware that there are some pretty awful practices in use here (spaghetti code, awful UX, etc.), but I like to remind myself where I started. That being said, the code works like a charm so feel free to download it and try it out for yourself. Perhaps someday I'll create a cleaner version with better coding standards.
 
 ## RUNNING THE GAME
